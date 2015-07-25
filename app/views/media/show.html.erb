@@ -1,0 +1,18 @@
+
+<%= link_to 'Back to sermon list', media_path %>
+<h2><%= @medium.title %></h2>
+<p>
+  <audio controls>
+  <source src=<%= @medium.link %> type="audio/mpeg">
+  Unfortunately, your browser does not support the audio element.
+</audio>
+</p>
+
+<div>
+  More sermons on <%= @medium.pillar.upcase %>
+  <ul>
+  <% @media.each do |medium| %>
+    <li><%= link_to medium.title + ": a sermon on " + medium.pillar.upcase, medium  %></li>
+  <% end %>
+  </ul>
+</div>
