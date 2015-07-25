@@ -15,8 +15,8 @@ class MediaController < ApplicationController
   end
 
   def show
-  	@medium = Medium.find_by(params[:id])
-  	@media = Medium.pillar.search(params[:query]).where('media.title != ?', @medium.title)
+  	@medium = Medium.find(params[:id])
+  	@media = Medium.search(params[:query]).where('media.title != ?', @medium.title).where(pillar: @medium.pillar)
   	respond_to do |format|
   	  format.html { render 'show' }
   	  format.json { render json: @medium }
@@ -37,7 +37,7 @@ class MediaController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_medium
-      # @medium = Medium.find(params[:id])
+      @medium = Medium.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

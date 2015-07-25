@@ -2,7 +2,7 @@ class Medium < ActiveRecord::Base
   PILLARS 	  = %w(prayer faith healing consecration wisdom vision word_of_god praise success holy_spirit prosperity supernatural) 
   MEDIA_TYPES = %w(video audio sermon_note)
 
-  scope :pillar, -> { where("pillar = ?", :pillar) }
+  # scope :pillar, -> { where("pillar = ?", :pillar) }
 
   validates :pillar, inclusion: { :in => PILLARS }
   validates  :media_type, inclusion: { :in => MEDIA_TYPES }
