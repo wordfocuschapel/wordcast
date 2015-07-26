@@ -5,7 +5,7 @@ class Medium < ActiveRecord::Base
   # scope :pillar, -> { where("pillar = ?", :pillar) }
 
   validates :pillar, inclusion: { :in => PILLARS }
-  validates  :media_type, inclusion: { :in => MEDIA_TYPES }
+  validates  :media_type, inclusion: { :in => MEDIA_TYPES }, presence: true
 
   PILLARS.each do |pillar|
   	define_method "#{pillar}?" do 

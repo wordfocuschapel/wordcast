@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :media
+
   # get 'media/index'
 
   # get 'media/show'

@@ -7,3 +7,7 @@
   <% end %>
   </ul>
 </div>
+
+<% content_for :head, auto_discovery_link_tag(:atom, media_url(format: "atom")) %>
+
+<%= link_to "rss", media_url(format: "atom") %>

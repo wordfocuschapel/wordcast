@@ -37,5 +37,7 @@ Medium.create!([
   { title: 'How Sin Affects Healing', media_type: 'audio', pillar: 'healing',
     link: 'https://s3.amazonaws.com/wordfocuschapel/07052015PBJ10PtsOnHealing.mp3' },
   { title: 'Healing Part 4', media_type: 'audio', pillar: 'healing',
-    link: 'https://s3.amazonaws.com/wordfocuschapel/07192015SISTOYINHealing.mp3' }
+    link: 'https://s3.amazonaws.com/wordfocuschapel/07192015SISTOYINHealing.mp3' },
+  { title: 'Healing Part 5', media_type: 'audio', pillar: 'healing',
+    link: 'https://s3.amazonaws.com/wordfocuschapel/07262015PBJHealingPt5.mp3' }
 ])
