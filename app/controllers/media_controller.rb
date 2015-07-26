@@ -7,9 +7,9 @@ class MediaController < ApplicationController
   def index
   	@media = Medium.search(params[:query]).order('media.updated_at DESC')
   	respond_to do |format|
-  	  format.html # index.html.erb
+  	  format.html
   	  format.json { render json: @media}
-  	  format.xml #{ render xml: @media.rss }
+  	  format.xml
   	  format.rss
   	  format.atom
   	end
@@ -24,15 +24,6 @@ class MediaController < ApplicationController
   	  format.xml { render xml: @medium }
   	end
   end
-
-  # def audios
-  # end
-  #
-  # def videos
-  # end
-  #
-  # def pillars
-  # end
 
   private
 
