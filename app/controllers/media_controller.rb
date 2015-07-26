@@ -5,7 +5,7 @@ class MediaController < ApplicationController
   before_action :set_medium, only: [:show, :edit, :update, :destroy]
 
   def index
-  	@media = Medium.search(params[:query])
+  	@media = Medium.search(params[:query]).order('media.updated_at DESC')
   	respond_to do |format|
   	  format.html # index.html.erb
   	  format.json { render json: @media}

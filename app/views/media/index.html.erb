@@ -4,11 +4,16 @@
     <thead>
       <th><h2>Sermons</small></h2></th>
     </thead>
-  <% @media.each do |medium| %>
+    <% @media.each do |medium| %>
     <tbody>
-      <td><h1><small><%= link_to medium.title, medium %></small></h1></td>
+      <td><h1><small><%= link_to medium.title, medium %>
+          <% if medium.latest? %>
+            <span class="label label-danger">Last Sunday</span>
+          <% end %> 
+          </small></h1>
+      </td>
     </tbody>
-  <% end %>
+    <% end %>
   </table>
 </div>
 

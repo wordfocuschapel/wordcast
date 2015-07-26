@@ -27,6 +27,12 @@ class Medium < ActiveRecord::Base
   	end
   end
 
+  def latest?
+    if self == Medium.last
+      return true
+    end
+  end
+
   class << self
   	PILLARS.each do |pillar|
   	  define_method "#{pillar}" do 
