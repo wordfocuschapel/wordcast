@@ -33,6 +33,10 @@ class Medium < ActiveRecord::Base
     end
   end
 
+  def pillar_as_title
+    pillar.upcase.gsub('_', ' ')
+  end
+
   class << self
   	PILLARS.each do |pillar|
   	  define_method "#{pillar}" do 

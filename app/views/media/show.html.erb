@@ -1,6 +1,6 @@
 <div class="row">
 	<button type="button" class="btn btn-default"><%= link_to 'Back to sermon list', media_path %></button>
-	<h2>A Sermon on <%= @medium.pillar.upcase.gsub('_', ' ') %></h2>
+	<h2>A Sermon on <%= @medium.pillar_as_title %></h2>
 	<div class="col-md-8 ">
 	<div class="panel panel-default">
 	  <div class="panel-heading"><h3><%= @medium.title %></h3></div>
@@ -15,7 +15,7 @@
 	<div class="col-md-4">
 	<div class="panel panel-default">
 	  <div class="panel-heading">
-	    <h3>More sermons on <%= @medium.pillar.upcase.gsub('_', ' ') %></h3>
+	    <h3>More sermons on <%= @medium.pillar_as_title %></h3>
 	  </div>
 	  <div class="panel-body">
 	    <ul class="list-group">
