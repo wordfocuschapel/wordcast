@@ -1,11 +1,15 @@
 <h1>Word Focus Chapel Word Casts</h1>
 <div>
-  <ul>
+  <table class="table table-hover">
+    <thead>
+      <th><h2>Sermons</small></h2></th>
+    </thead>
   <% @media.each do |medium| %>
-    <li><%= link_to medium.title, medium %>
-    </li>
+    <tbody>
+      <td><h1><small><%= link_to medium.title, medium %></small></h1></td>
+    </tbody>
   <% end %>
-  </ul>
+  </table>
 </div>
 
 <% content_for :head, auto_discovery_link_tag(:atom, media_url(format: "atom")) %>
