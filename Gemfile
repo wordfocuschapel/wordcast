@@ -21,7 +21,7 @@ gem 'font-awesome-rails',       '~> 4.3.0.0'
 gem 'active_model_serializers', '~> 0.9.3' 
 
 group :development, :test do
-  gem 'sqlite3',                '~> 1.3.10'
+  gem 'sqlite3',                '~> 1.3.10', group: :development
   gem 'byebug',                 '~> 4.0.5'
   gem 'web-console',            '~> 2.1.2'
   gem 'spring',                 '~> 1.3.6'
