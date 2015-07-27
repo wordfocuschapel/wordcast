@@ -2,6 +2,7 @@ title = "Word Focus Chapel WordCasts"
 author = "Word Focus Chapel"
 description = "Word Focus Resources from Word Focus Chapel. From sermon audio and video, to Sermon notes."
 keywords = "sermons, christian, church, podcasts, jesus, god, christianity, hope, encourage, prayer, religion, bible, faith"
+image = "http://wordcasts.herokuapp.com/images/wordcasts_cover.png"
 
 xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:media" => "http://search.yahoo.com/mrss/",  :version => "2.0" do
   xml.channel do
@@ -14,7 +15,7 @@ xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd",  "xmlns:
     xml.itunes :author, author
     xml.itunes :keywords, keywords
     xml.itunes :explicit, 'clean'
-    # xml.itunes :image, :href => image
+    xml.itunes :image, :href => image
     xml.itunes :owner do
       xml.itunes :name, author
       xml.itunes :email, 'wordfocuschapel@gmail.com'
