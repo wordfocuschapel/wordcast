@@ -1,5 +1,5 @@
 class MediaController < ApplicationController
-  respond_to :html, :xml, :json, :atom, :rss
+  respond_to :html, :xml, :json, :rss #:atom, :rss
   # before_filter :sort_by_pillar
   # before_filter :sort_by_media_type  
   before_action :set_medium, only: [:show, :edit, :update, :destroy]
@@ -11,7 +11,7 @@ class MediaController < ApplicationController
   	  format.json { render json: @media}
   	  format.xml
   	  format.rss
-  	  format.atom
+  	  # format.atom { render action: 'index', layout: false }
   	end
   end
 

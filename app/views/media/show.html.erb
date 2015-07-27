@@ -9,6 +9,14 @@
 	      <source src=<%= @medium.link %> type="audio/mpeg">
 	  	  Unfortunately, your browser does not support the audio element.
 		</audio>
+		<ul class="nav horizontal">
+		 <% if !@medium.latest? && @medium.next %>
+		  <li><%= link_to "Next Sermon", @medium.next %></li>
+		 <% end %>
+		 <% if @medium.previous %>
+		  <li><%= link_to "Previous Sermon", @medium.previous %></li>
+		<% end %>  
+		</ul>
 	  </div>
 	</div>	
 	</div>

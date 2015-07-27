@@ -31,6 +31,14 @@ class Medium < ActiveRecord::Base
     end
   end
 
+  def previous
+    self.class.where("id < ?", id).order("id desc").first
+  end
+
+  def next
+    self.class.where("id > ?", id).order("id").first
+  end
+
   def pillar_as_title
     pillar.gsub('_', ' ').upcase
   end
