@@ -1,4 +1,4 @@
-title = "Word Focus Chapel Word Casts"
+title = "Word Focus Chapel WordCasts"
 author = "Word Focus Chapel"
 description = "Word Focus Resources from Word Focus Chapel. From sermon audio and video, to Sermon notes."
 keywords = "sermons, christian, church, podcasts, jesus, god, christianity, hope, encourage, prayer, religion, bible, faith"

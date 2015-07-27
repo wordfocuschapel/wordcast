@@ -1,7 +1,7 @@
 class MediaController < ApplicationController
   respond_to :html, :xml, :json, :atom, :rss
-  before_filter :sort_by_pillar
-  before_filter :sort_by_media_type  
+  # before_filter :sort_by_pillar
+  # before_filter :sort_by_media_type  
   before_action :set_medium, only: [:show, :edit, :update, :destroy]
 
   def index
