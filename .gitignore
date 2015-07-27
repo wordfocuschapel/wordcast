@@ -15,3 +15,16 @@
 /log/*
 !/log/.keep
 /tmp
+/db/seeds.rb
+
+/config/database.yml
+database.yml
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+/config/secrets.yml
+/config
